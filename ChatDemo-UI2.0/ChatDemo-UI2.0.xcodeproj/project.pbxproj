@@ -1806,17 +1806,17 @@
 		F33B7B401A16529F006A962F /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				F33B7B411A16529F006A962F /* AppDelegate.h */,
-				F33B7B421A16529F006A962F /* AppDelegate.m */,
 				F33B7B431A16529F006A962F /* Chat */,
 				F33B7B7C1A16529F006A962F /* ChatGroup */,
 				F33B7B8B1A16529F006A962F /* Contacts */,
 				F33B7B9B1A16529F006A962F /* Core Data */,
+				F33B7B411A16529F006A962F /* AppDelegate.h */,
+				F33B7B421A16529F006A962F /* AppDelegate.m */,
+				F33B7BE01A16529F006A962F /* MainViewController.h */,
+				F33B7BE11A16529F006A962F /* MainViewController.m */,
 				F33B7BDD1A16529F006A962F /* LoginViewController.h */,
 				F33B7BDE1A16529F006A962F /* LoginViewController.m */,
 				F33B7BDF1A16529F006A962F /* LoginViewController.xib */,
-				F33B7BE01A16529F006A962F /* MainViewController.h */,
-				F33B7BE11A16529F006A962F /* MainViewController.m */,
 				F33B7BE21A16529F006A962F /* Settings */,
 			);
 			path = Class;
