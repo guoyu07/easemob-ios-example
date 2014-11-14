@@ -50,7 +50,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     if ([UIDevice currentDevice].systemVersion.floatValue >= 7) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
-    self.title = @"会话";
+    self.title = @"聊天";
     
     //获取未读消息数，此时并没有把self注册为SDK的delegate，读取出的未读数是上次退出程序时的
     [self didUnreadMessagesCountChanged];
@@ -85,10 +85,10 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     if (item.tag == 0) {
-        self.title = @"会话";
+        self.title = @"聊天";
         self.navigationItem.rightBarButtonItem = nil;
     }else if (item.tag == 1){
-        self.title = @"通讯录";
+        self.title = @"好友";
         self.navigationItem.rightBarButtonItem = _addFriendItem;
     }else if (item.tag == 2){
         self.title = @"设置";
@@ -136,7 +136,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     self.tabBar.selectionIndicatorImage = [[UIImage imageNamed:@"tabbarSelectBg"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
     
     _chatListVC = [[ChatListViewController alloc] init];
-    _chatListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"会话"
+    _chatListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"聊天"
                                                            image:nil
                                                              tag:0];
     [_chatListVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_chatsHL"]
@@ -145,7 +145,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     [self selectedTapTabBarItems:_chatListVC.tabBarItem];
     
     _contactsVC = [[ContactsViewController alloc] initWithNibName:nil bundle:nil];
-    _contactsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"通讯录"
+    _contactsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"好友"
                                                            image:nil
                                                              tag:1];
     [_contactsVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]
