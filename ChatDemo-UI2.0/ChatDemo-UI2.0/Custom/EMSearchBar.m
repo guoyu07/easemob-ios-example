@@ -11,6 +11,7 @@
   */
 
 #import "EMSearchBar.h"
+#import "UIColor+CreateMethods.h"
 
 @implementation EMSearchBar
 
@@ -35,6 +36,8 @@
                 textField.backgroundColor = [UIColor whiteColor];
             }
         }
+        
+        self.barTintColor = [UIColor colorWithHex:@"#dddddd" alpha:1];
     }
     return self;
 }

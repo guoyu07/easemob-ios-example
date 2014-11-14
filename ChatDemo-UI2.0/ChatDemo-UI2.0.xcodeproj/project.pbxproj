@@ -336,6 +336,7 @@
 		F33B7C311A16529F006A962F /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE61A16529F006A962F /* DebugViewController.m */; };
 		F33B7C321A16529F006A962F /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE81A16529F006A962F /* PushNotificationViewController.m */; };
 		F33B7C331A16529F006A962F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BEA1A16529F006A962F /* SettingsViewController.m */; };
+		F33B7C371A165ED1006A962F /* UIColor+CreateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7C361A165ED1006A962F /* UIColor+CreateMethods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -885,6 +886,8 @@
 		F33B7BE81A16529F006A962F /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationViewController.m; sourceTree = "<group>"; };
 		F33B7BE91A16529F006A962F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		F33B7BEA1A16529F006A962F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		F33B7C351A165ED1006A962F /* UIColor+CreateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CreateMethods.h"; sourceTree = "<group>"; };
+		F33B7C361A165ED1006A962F /* UIColor+CreateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CreateMethods.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1429,6 +1432,8 @@
 				90133E601972D11000C49B56 /* NSString+Valid.m */,
 				90133EBF1972DFF400C49B56 /* UIViewController+DismissKeyboard.h */,
 				90133EC01972DFF400C49B56 /* UIViewController+DismissKeyboard.m */,
+				F33B7C351A165ED1006A962F /* UIColor+CreateMethods.h */,
+				F33B7C361A165ED1006A962F /* UIColor+CreateMethods.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2459,6 +2464,7 @@
 				3C1CEF67196E9F5400DBA56B /* MWCaptionView.m in Sources */,
 				909308BF19604821005013BD /* EmojiEmoticons.m in Sources */,
 				9091111C192EEAED008A48AA /* UIViewController+HUD.m in Sources */,
+				F33B7C371A165ED1006A962F /* UIColor+CreateMethods.m in Sources */,
 				F33B7BFA1A16529F006A962F /* EMChatLocationBubbleView.m in Sources */,
 				F33B7C211A16529F006A962F /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				F33B7C2C1A16529F006A962F /* UIDemo.xcdatamodeld in Sources */,
@@ -2628,7 +2634,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "ChatDemo-UI2.0/ChatDemo-UI2.0-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChatDemo-UI2.0/3rdparty",
@@ -2663,7 +2669,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "ChatDemo-UI2.0/ChatDemo-UI2.0-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChatDemo-UI2.0/3rdparty",

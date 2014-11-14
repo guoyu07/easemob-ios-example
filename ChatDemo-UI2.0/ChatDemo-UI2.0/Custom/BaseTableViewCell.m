@@ -19,9 +19,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        _bottomLineView = [[UIView alloc] init];
-        _bottomLineView.backgroundColor = [UIColor colorWithRed:207 / 255.0 green:210 /255.0 blue:213 / 255.0 alpha:0.7];
-        [self.contentView addSubview:_bottomLineView];
+//        _bottomLineView = [[UIView alloc] init];
+//        _bottomLineView.backgroundColor = [UIColor colorWithRed:207 / 255.0 green:210 /255.0 blue:213 / 255.0 alpha:0.7];
+//        [self.contentView addSubview:_bottomLineView];
         
         self.textLabel.backgroundColor = [UIColor clearColor];
         
@@ -47,6 +47,18 @@
     self.textLabel.frame = rect;
     
     _bottomLineView.frame = CGRectMake(0, self.contentView.frame.size.height - 1, self.contentView.frame.size.width, 1);
+}
+
+-(void)addSubview:(UIView *)view
+{
+    // The separator has a height of 0.5pt on a retina display and 1pt on non-retina.
+    // Prevent subviews with this height from being added.
+    if (CGRectGetHeight(view.frame)*[UIScreen mainScreen].scale == 1)
+    {
+        return;
+    }
+    
+    [super addSubview:view];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

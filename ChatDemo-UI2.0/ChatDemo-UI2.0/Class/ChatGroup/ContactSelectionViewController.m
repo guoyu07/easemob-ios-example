@@ -124,7 +124,7 @@
         _searchBar.delegate = self;
         _searchBar.placeholder = @"搜索";
         _searchBar.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
-        _searchBar.backgroundColor = [UIColor colorWithRed:0.747 green:0.756 blue:0.751 alpha:1.000];
+        _searchBar.backgroundColor = [UIColor whiteColor];
     }
     
     return _searchBar;
