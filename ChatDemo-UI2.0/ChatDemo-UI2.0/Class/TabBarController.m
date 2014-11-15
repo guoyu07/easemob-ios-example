@@ -10,7 +10,7 @@
   * from EaseMob Technologies.
   */
 
-#import "MainViewController.h"
+#import "TabBarController.h"
 #import "ChatListViewController.h"
 #import "ContactsViewController.h"
 #import "SettingsViewController.h"
@@ -19,7 +19,7 @@
 //两次提示的默认间隔
 static const CGFloat kDefaultPlaySoundInterval = 3.0;
 
-@interface MainViewController () <UIAlertViewDelegate, IChatManagerDelegate>
+@interface TabBarController () <UIAlertViewDelegate, IChatManagerDelegate>
 {
     ChatListViewController *_chatListVC;
     ContactsViewController *_contactsVC;
@@ -32,7 +32,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 
 @end
 
-@implementation MainViewController
+@implementation TabBarController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

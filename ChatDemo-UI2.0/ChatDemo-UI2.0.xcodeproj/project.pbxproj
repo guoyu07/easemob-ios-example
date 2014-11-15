@@ -331,7 +331,7 @@
 		F33B7C2C1A16529F006A962F /* UIDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BDB1A16529F006A962F /* UIDemo.xcdatamodeld */; };
 		F33B7C2D1A16529F006A962F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BDE1A16529F006A962F /* LoginViewController.m */; };
 		F33B7C2E1A16529F006A962F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33B7BDF1A16529F006A962F /* LoginViewController.xib */; };
-		F33B7C2F1A16529F006A962F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE11A16529F006A962F /* MainViewController.m */; };
+		F33B7C2F1A16529F006A962F /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE11A16529F006A962F /* TabBarController.m */; };
 		F33B7C301A16529F006A962F /* BlackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE41A16529F006A962F /* BlackListViewController.m */; };
 		F33B7C311A16529F006A962F /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE61A16529F006A962F /* DebugViewController.m */; };
 		F33B7C321A16529F006A962F /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE81A16529F006A962F /* PushNotificationViewController.m */; };
@@ -876,8 +876,8 @@
 		F33B7BDD1A16529F006A962F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F33B7BDE1A16529F006A962F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F33B7BDF1A16529F006A962F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		F33B7BE01A16529F006A962F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		F33B7BE11A16529F006A962F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F33B7BE01A16529F006A962F /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		F33B7BE11A16529F006A962F /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		F33B7BE31A16529F006A962F /* BlackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackListViewController.h; sourceTree = "<group>"; };
 		F33B7BE41A16529F006A962F /* BlackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackListViewController.m; sourceTree = "<group>"; };
 		F33B7BE51A16529F006A962F /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
@@ -1817,8 +1817,8 @@
 				F33B7B9B1A16529F006A962F /* Core Data */,
 				F33B7B411A16529F006A962F /* AppDelegate.h */,
 				F33B7B421A16529F006A962F /* AppDelegate.m */,
-				F33B7BE01A16529F006A962F /* MainViewController.h */,
-				F33B7BE11A16529F006A962F /* MainViewController.m */,
+				F33B7BE01A16529F006A962F /* TabBarController.h */,
+				F33B7BE11A16529F006A962F /* TabBarController.m */,
 				F33B7BDD1A16529F006A962F /* LoginViewController.h */,
 				F33B7BDE1A16529F006A962F /* LoginViewController.m */,
 				F33B7BDF1A16529F006A962F /* LoginViewController.xib */,
@@ -2428,7 +2428,7 @@
 				F33B7BED1A16529F006A962F /* ChatListViewController.m in Sources */,
 				3C1CEF7A196E9F5400DBA56B /* PSTGridLayoutItem.m in Sources */,
 				F33B7C301A16529F006A962F /* BlackListViewController.m in Sources */,
-				F33B7C2F1A16529F006A962F /* MainViewController.m in Sources */,
+				F33B7C2F1A16529F006A962F /* TabBarController.m in Sources */,
 				3C3527361931D1BE00385240 /* BaseTableViewCell.m in Sources */,
 				F33B7BEF1A16529F006A962F /* ChatViewController.m in Sources */,
 				3CBF90C019302F5000AD68AE /* BaseViewController.m in Sources */,

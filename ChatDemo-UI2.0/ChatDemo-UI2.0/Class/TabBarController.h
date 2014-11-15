@@ -12,7 +12,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UITabBarController
+@interface TabBarController : UITabBarController
 
 - (void)jumpToChatList;
 

@@ -11,7 +11,7 @@
  */
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "TabBarController.h"
 #import "LoginViewController.h"
 #import "ApplyViewController.h"
 #import "MobClick.h"
@@ -296,7 +296,7 @@
     if (isAutoLogin || loginSuccess) {
         [[ApplyViewController shareController] loadDataSourceFromLocalDB];
         if (_mainController == nil) {
-            _mainController = [[MainViewController alloc] init];
+            _mainController = [[TabBarController alloc] init];
             nav = [[UINavigationController alloc] initWithRootViewController:_mainController];
         }else{
             nav  = _mainController.navigationController;
