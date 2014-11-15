@@ -313,13 +313,14 @@
     cell.detailMsg = [self subTitleMessageByConversation:conversation];
     cell.time = [self lastMessageTimeByConversation:conversation];
     cell.unreadCount = [self unreadMessageCountByConversation:conversation];
-    if (indexPath.row % 2 == 1) {
-        cell.contentView.backgroundColor = RGBACOLOR(246, 246, 246, 1);
-    }else{
-        cell.contentView.backgroundColor = [UIColor whiteColor];
-    }
+//    if (indexPath.row % 2 == 1) {
+//        cell.contentView.backgroundColor = RGBACOLOR(246, 246, 246, 1);
+//    }else{
+//        cell.contentView.backgroundColor = [UIColor whiteColor];
+//    }
     return cell;
 }
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return  self.dataSource.count;
@@ -331,6 +332,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    cell.contentView.backgroundColor = [UIColor whiteColor];
+    
     
     EMConversation *conversation = [self.dataSource objectAtIndex:indexPath.row];
     

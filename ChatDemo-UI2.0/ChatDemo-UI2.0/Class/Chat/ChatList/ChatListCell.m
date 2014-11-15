@@ -53,9 +53,9 @@
         
         self.textLabel.backgroundColor = [UIColor clearColor];
         
-        _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, 1)];
-        _lineView.backgroundColor = RGBACOLOR(207, 210, 213, 0.7);
-        [self.contentView addSubview:_lineView];
+//        _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, 1)];
+//        _lineView.backgroundColor = RGBACOLOR(207, 210, 213, 0.7);
+//        [self.contentView addSubview:_lineView];
     }
     return self;
 }
@@ -68,6 +68,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+    
     if (![_unreadLabel isHidden]) {
         _unreadLabel.backgroundColor = [UIColor redColor];
     }
@@ -121,4 +122,5 @@
 {
     return 60;
 }
+
 @end

@@ -141,28 +141,12 @@
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] init];
         
-        _tableView.separatorColor = [UIColor whiteColor];
-        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        self.tableView.tableFooterView = [UIView new];
-        
         _tableView.sectionIndexTrackingBackgroundColor = [UIColor whiteColor];
         _tableView.sectionIndexColor = [UIColor lightGrayColor];
         _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     }
     
     return _tableView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    // This will create a "invisible" footer
-    return 0.01f;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return [UIView new];
-    
-    // If you are not using ARC:
-    // return [[UIView new] autorelease];
 }
 
 - (EMSearchDisplayController *)searchController
