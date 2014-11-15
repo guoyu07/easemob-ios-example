@@ -337,6 +337,7 @@
 		F33B7C321A16529F006A962F /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BE81A16529F006A962F /* PushNotificationViewController.m */; };
 		F33B7C331A16529F006A962F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7BEA1A16529F006A962F /* SettingsViewController.m */; };
 		F33B7C371A165ED1006A962F /* UIColor+CreateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7C361A165ED1006A962F /* UIColor+CreateMethods.m */; };
+		F33B7C3A1A16DEFD006A962F /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7C391A16DEFD006A962F /* UIImage+ImageWithColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -888,6 +889,8 @@
 		F33B7BEA1A16529F006A962F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		F33B7C351A165ED1006A962F /* UIColor+CreateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CreateMethods.h"; sourceTree = "<group>"; };
 		F33B7C361A165ED1006A962F /* UIColor+CreateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CreateMethods.m"; sourceTree = "<group>"; };
+		F33B7C381A16DEFD006A962F /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		F33B7C391A16DEFD006A962F /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1434,6 +1437,8 @@
 				90133EC01972DFF400C49B56 /* UIViewController+DismissKeyboard.m */,
 				F33B7C351A165ED1006A962F /* UIColor+CreateMethods.h */,
 				F33B7C361A165ED1006A962F /* UIColor+CreateMethods.m */,
+				F33B7C381A16DEFD006A962F /* UIImage+ImageWithColor.h */,
+				F33B7C391A16DEFD006A962F /* UIImage+ImageWithColor.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2487,6 +2492,7 @@
 				F33B7C281A16529F006A962F /* MagicalRecord+Options.m in Sources */,
 				F33B7BEE1A16529F006A962F /* ChatSendHelper.m in Sources */,
 				F33B7C331A16529F006A962F /* SettingsViewController.m in Sources */,
+				F33B7C3A1A16DEFD006A962F /* UIImage+ImageWithColor.m in Sources */,
 				3C1CEF7C196E9F5400DBA56B /* PSTGridLayoutSection.m in Sources */,
 				F33B7BFF1A16529F006A962F /* EMChatViewCell.m in Sources */,
 				3C1CEF70196E9F5400DBA56B /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,

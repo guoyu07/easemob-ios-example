@@ -15,6 +15,8 @@
 #import "LoginViewController.h"
 #import "ApplyViewController.h"
 #import "MobClick.h"
+#import "UIImage+ImageWithColor.h"
+#import "UIColor+CreateMethods.h"
 
 @implementation AppDelegate
 
@@ -28,9 +30,15 @@
                                                object:nil];
     
     if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0) {
-        [[UINavigationBar appearance] setBarTintColor:RGBACOLOR(78, 188, 211, 1)];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
-         [NSDictionary dictionaryWithObjectsAndKeys:RGBACOLOR(245, 245, 245, 1), NSForegroundColorAttributeName, [UIFont fontWithName:@ "HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+         [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, [UIFont fontWithName:@ "HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+
+        [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+        [[UINavigationBar appearance] setShadowImage:[UIImage imageWithColor:[UIColor colorWithHex:@"#eeeeee" alpha:1]]];
+        
+        
+        
     }
     
     //友盟
@@ -310,8 +318,7 @@
     
     if ([UIDevice currentDevice].systemVersion.floatValue < 7.0){
         nav.navigationBar.barStyle = UIBarStyleDefault;
-        [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"titleBar"]
-                                forBarMetrics:UIBarMetricsDefault];
+        [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"titleBar"] forBarMetrics:UIBarMetricsDefault];
         
         [nav.navigationBar.layer setMasksToBounds:YES];
     }

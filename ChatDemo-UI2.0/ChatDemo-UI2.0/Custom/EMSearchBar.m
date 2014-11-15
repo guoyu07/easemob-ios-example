@@ -37,7 +37,9 @@
             }
         }
         
-        self.barTintColor = [UIColor colorWithHex:@"#dddddd" alpha:1];
+        self.barTintColor = [UIColor colorWithHex:@"#eeeeee" alpha:1];
+        self.layer.borderColor = [[UIColor colorWithHex:@"#efefef" alpha:1] CGColor];
+        self.layer.borderWidth = 1.0;
     }
     return self;
 }
