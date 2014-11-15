@@ -134,23 +134,34 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 {
 //    self.tabBar.backgroundImage = [[UIImage imageNamed:@"tabbarBackground"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
 //    self.tabBar.selectionIndicatorImage = [[UIImage imageNamed:@"tabbarSelectBg"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
-//    
-    self.tabBar.tintColor = [UIColor blueColor];
+    
+    self.tabBar.tintColor = [UIColor lightGrayColor];
+    
     
     _chatListVC = [[ChatListViewController alloc] init];
-    _chatListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"聊天" image:[UIImage imageNamed:@"tabbar_chats"] selectedImage:[UIImage imageNamed:@"tabbar_chatsHL"]];
+    _chatListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"聊天"
+                                                           image:nil
+                                                             tag:0];
+    [_chatListVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_chatsHL"]
+                         withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_chats"]];
     [self unSelectedTapTabBarItems:_chatListVC.tabBarItem];
     [self selectedTapTabBarItems:_chatListVC.tabBarItem];
     
     _contactsVC = [[ContactsViewController alloc] initWithNibName:nil bundle:nil];
-    _contactsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"好友" image:[UIImage imageNamed:@"tabbar_contacts"] selectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]];
-    
+    _contactsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"好友"
+                                                           image:nil
+                                                             tag:1];
+    [_contactsVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]
+                         withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_contacts"]];
     [self unSelectedTapTabBarItems:_contactsVC.tabBarItem];
     [self selectedTapTabBarItems:_contactsVC.tabBarItem];
     
     _settingsVC = [[SettingsViewController alloc] init];
-    _settingsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"设置" image:[UIImage imageNamed:@"tabbar_setting"] selectedImage:[UIImage imageNamed:@"tabbar_settingHL"]];
-    
+    _settingsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"设置"
+                                                           image:nil
+                                                             tag:2];
+    [_settingsVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_settingHL"]
+                         withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_setting"]];
     _settingsVC.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     [self unSelectedTapTabBarItems:_settingsVC.tabBarItem];
     [self selectedTapTabBarItems:_settingsVC.tabBarItem];
@@ -162,15 +173,15 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 -(void)unSelectedTapTabBarItems:(UITabBarItem *)tabBarItem
 {
     [tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                        [UIFont systemFontOfSize:14], NSFontAttributeName,[UIColor lightGrayColor],NSForegroundColorAttributeName,
+                                        [UIFont systemFontOfSize:13], UITextAttributeFont,[UIColor lightGrayColor],UITextAttributeTextColor,
                                         nil] forState:UIControlStateNormal];
 }
 
 -(void)selectedTapTabBarItems:(UITabBarItem *)tabBarItem
 {
     [tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                        [UIFont systemFontOfSize:14],
-                                        NSFontAttributeName,[UIColor blackColor],NSForegroundColorAttributeName,
+                                        [UIFont systemFontOfSize:13],
+                                        UITextAttributeFont,[UIColor darkGrayColor],UITextAttributeTextColor,
                                         nil] forState:UIControlStateSelected];
 }
 
