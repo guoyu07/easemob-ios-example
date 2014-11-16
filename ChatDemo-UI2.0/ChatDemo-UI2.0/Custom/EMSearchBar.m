@@ -40,6 +40,14 @@
         self.barTintColor = [UIColor colorWithHex:@"#eeeeee" alpha:1];
         self.layer.borderColor = [[UIColor colorWithHex:@"#efefef" alpha:1] CGColor];
         self.layer.borderWidth = 1.0;
+        
+        // set Cancel text color
+        [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                      [UIColor redColor],NSForegroundColorAttributeName,
+                                                                                                      //[UIColor whiteColor],UITextAttributeTextShadowColor,
+                                                                                                      //[NSValue valueWithUIOffset:UIOffsetMake(0, 1)],UITextAttributeTextShadowOffset,
+                                                                                                      nil]
+                                                                                            forState:UIControlStateNormal];
     }
     return self;
 }
