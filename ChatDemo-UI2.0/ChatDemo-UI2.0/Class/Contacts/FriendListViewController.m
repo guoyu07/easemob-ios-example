@@ -10,7 +10,7 @@
   * from EaseMob Technologies.
   */
 
-#import "ContactsViewController.h"
+#import "FriendListViewController.h"
 
 #import "BaseTableViewCell.h"
 #import "RealtimeSearchUtil.h"
@@ -23,7 +23,7 @@
 #import "GroupListViewController.h"
 #import "ChatViewController.h"
 
-@interface ContactsViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UIActionSheetDelegate, BaseTableCellDelegate, SRRefreshDelegate>
+@interface FriendListViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UIActionSheetDelegate, BaseTableCellDelegate, SRRefreshDelegate>
 {
     NSIndexPath *_currentLongPressIndex;
 }
@@ -42,7 +42,7 @@
 
 @end
 
-@implementation ContactsViewController
+@implementation FriendListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -156,7 +156,7 @@
         _searchController.delegate = self;
         _searchController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
-        __weak ContactsViewController *weakSelf = self;
+        __weak FriendListViewController *weakSelf = self;
         [_searchController setCellForRowAtIndexPathCompletion:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             static NSString *CellIdentifier = @"ContactListCell";
             BaseTableViewCell *cell = (BaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -466,7 +466,7 @@
 //刷新列表
 - (void)slimeRefreshStartRefresh:(SRRefreshView *)refreshView
 {
-    __weak ContactsViewController *weakSelf = self;
+    __weak FriendListViewController *weakSelf = self;
     [[[EaseMob sharedInstance] chatManager] asyncFetchBuddyListWithCompletion:^(NSArray *buddyList, EMError *error) {
         if (!error) {
             [weakSelf reloadDataSource];

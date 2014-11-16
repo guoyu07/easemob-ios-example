@@ -11,11 +11,11 @@
   */
 
 #import <UIKit/UIKit.h>
-#import "TabBarController.h"
+#import "TabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, IChatManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) TabBarController *mainController;
+@property (strong, nonatomic) TabBarViewController *tabBarViewController;
 
 @end

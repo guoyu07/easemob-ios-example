@@ -11,19 +11,11 @@
   */
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
-@interface ContactsViewController : BaseViewController
 
-//好友请求变化时，更新好友请求未处理的个数
-- (void)reloadApplyView;
+@interface TabBarViewController : UITabBarController
 
-//群组变化时，更新群组页面
-- (void)reloadGroupView;
+- (void)jumpToChatList;
 
-//好友个数变化时，重新获取数据
-- (void)reloadDataSource;
-
-//添加好友的操作被触发
-- (void)addFriendAction;
+- (void)setupUntreatedApplyCount;
 
 @end

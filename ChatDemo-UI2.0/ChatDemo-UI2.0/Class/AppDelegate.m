@@ -11,7 +11,7 @@
  */
 
 #import "AppDelegate.h"
-#import "TabBarController.h"
+#import "TabBarViewController.h"
 #import "LoginViewController.h"
 #import "ApplyViewController.h"
 #import "MobClick.h"
@@ -129,8 +129,8 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    if (_mainController) {
-        [_mainController jumpToChatList];
+    if (_tabBarViewController) {
+        [_tabBarViewController jumpToChatList];
     }
     
 #warning SDK方法调用
@@ -139,8 +139,8 @@
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    if (_mainController) {
-        [_mainController jumpToChatList];
+    if (_tabBarViewController) {
+        [_tabBarViewController jumpToChatList];
     }
 #warning SDK方法调用
     [[EaseMob sharedInstance] application:application didReceiveLocalNotification:notification];
@@ -192,8 +192,8 @@
     }
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"title":username, @"username":username, @"applyMessage":message, @"applyStyle":[NSNumber numberWithInteger:ApplyStyleFriend]}];
     [[ApplyViewController shareController] addNewApply:dic];
-    if (_mainController) {
-        [_mainController setupUntreatedApplyCount];
+    if (_tabBarViewController) {
+        [_tabBarViewController setupUntreatedApplyCount];
     }
 }
 
@@ -213,8 +213,8 @@
     }
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"title":groupName, @"groupId":groupId, @"username":username, @"applyMessage":message, @"applyStyle":[NSNumber numberWithInteger:ApplyStyleGroupInvitation]}];
     [[ApplyViewController shareController] addNewApply:dic];
-    if (_mainController) {
-        [_mainController setupUntreatedApplyCount];
+    if (_tabBarViewController) {
+        [_tabBarViewController setupUntreatedApplyCount];
     }
 }
 
@@ -244,8 +244,8 @@
     else{
         NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"title":groupname, @"groupId":groupId, @"username":username, @"groupname":groupname, @"applyMessage":reason, @"applyStyle":[NSNumber numberWithInteger:ApplyStyleJoinGroup]}];
         [[ApplyViewController shareController] addNewApply:dic];
-        if (_mainController) {
-            [_mainController setupUntreatedApplyCount];
+        if (_tabBarViewController) {
+            [_tabBarViewController setupUntreatedApplyCount];
         }
     }
 }
@@ -303,14 +303,14 @@
     
     if (isAutoLogin || loginSuccess) {
         [[ApplyViewController shareController] loadDataSourceFromLocalDB];
-        if (_mainController == nil) {
-            _mainController = [[TabBarController alloc] init];
-            nav = [[UINavigationController alloc] initWithRootViewController:_mainController];
+        if (_tabBarViewController == nil) {
+            _tabBarViewController = [[TabBarViewController alloc] init];
+            nav = [[UINavigationController alloc] initWithRootViewController:_tabBarViewController];
         }else{
-            nav  = _mainController.navigationController;
+            nav  = _tabBarViewController.navigationController;
         }
     }else{
-        _mainController = nil;
+        _tabBarViewController = nil;
         LoginViewController *loginController = [[LoginViewController alloc] init];
         nav = [[UINavigationController alloc] initWithRootViewController:loginController];
         loginController.title = @"环信Demo";

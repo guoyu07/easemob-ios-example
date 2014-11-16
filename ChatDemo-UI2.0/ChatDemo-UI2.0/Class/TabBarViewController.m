@@ -10,19 +10,19 @@
   * from EaseMob Technologies.
   */
 
-#import "TabBarController.h"
+#import "TabBarViewController.h"
 #import "ChatListViewController.h"
-#import "ContactsViewController.h"
+#import "FriendListViewController.h"
 #import "SettingsViewController.h"
 #import "ApplyViewController.h"
 
 //两次提示的默认间隔
 static const CGFloat kDefaultPlaySoundInterval = 3.0;
 
-@interface TabBarController () <UIAlertViewDelegate, IChatManagerDelegate>
+@interface TabBarViewController () <UIAlertViewDelegate, IChatManagerDelegate>
 {
     ChatListViewController *_chatListVC;
-    ContactsViewController *_contactsVC;
+    FriendListViewController *_friendsListVC;
     SettingsViewController *_settingsVC;
     
     UIBarButtonItem *_addFriendItem;
@@ -32,7 +32,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 
 @end
 
-@implementation TabBarController
+@implementation TabBarViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -63,7 +63,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     
     UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [addButton setImage:[UIImage imageNamed:@"add.png"] forState:UIControlStateNormal];
-    [addButton addTarget:_contactsVC action:@selector(addFriendAction) forControlEvents:UIControlEventTouchUpInside];
+    [addButton addTarget:_friendsListVC action:@selector(addFriendAction) forControlEvents:UIControlEventTouchUpInside];
     _addFriendItem = [[UIBarButtonItem alloc] initWithCustomView:addButton];
     
     [self setupUnreadMessageCount];
@@ -147,14 +147,14 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     [self unSelectedTapTabBarItems:_chatListVC.tabBarItem];
     [self selectedTapTabBarItems:_chatListVC.tabBarItem];
     
-    _contactsVC = [[ContactsViewController alloc] initWithNibName:nil bundle:nil];
-    _contactsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"好友"
+    _friendsListVC = [[FriendListViewController alloc] initWithNibName:nil bundle:nil];
+    _friendsListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"好友"
                                                            image:nil
                                                              tag:1];
-    [_contactsVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]
+    [_friendsListVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]
                          withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_contacts"]];
-    [self unSelectedTapTabBarItems:_contactsVC.tabBarItem];
-    [self selectedTapTabBarItems:_contactsVC.tabBarItem];
+    [self unSelectedTapTabBarItems:_friendsListVC.tabBarItem];
+    [self selectedTapTabBarItems:_friendsListVC.tabBarItem];
     
     _settingsVC = [[SettingsViewController alloc] init];
     _settingsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"设置"
@@ -166,7 +166,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     [self unSelectedTapTabBarItems:_settingsVC.tabBarItem];
     [self selectedTapTabBarItems:_settingsVC.tabBarItem];
     
-    self.viewControllers = @[_chatListVC, _contactsVC, _settingsVC];
+    self.viewControllers = @[_chatListVC, _friendsListVC, _settingsVC];
     [self selectedTapTabBarItems:_chatListVC.tabBarItem];
 }
 
@@ -208,11 +208,11 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 - (void)setupUntreatedApplyCount
 {
     NSInteger unreadCount = [[[ApplyViewController shareController] dataSource] count];
-    if (_contactsVC) {
+    if (_friendsListVC) {
         if (unreadCount > 0) {
-            _contactsVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",unreadCount];
+            _friendsListVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",unreadCount];
         }else{
-            _contactsVC.tabBarItem.badgeValue = nil;
+            _friendsListVC.tabBarItem.badgeValue = nil;
         }
     }
 }
@@ -436,26 +436,26 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     }
 #endif
     
-    [_contactsVC reloadApplyView];
+    [_friendsListVC reloadApplyView];
 }
 
 - (void)didUpdateBuddyList:(NSArray *)buddyList
             changedBuddies:(NSArray *)changedBuddies
                      isAdd:(BOOL)isAdd
 {
-    [_contactsVC reloadDataSource];
+    [_friendsListVC reloadDataSource];
 }
 
 - (void)didRemovedByBuddy:(NSString *)username
 {
     [[EaseMob sharedInstance].chatManager removeConversationByChatter:username deleteMessages:YES];
     [_chatListVC refreshDataSource];
-    [_contactsVC reloadDataSource];
+    [_friendsListVC reloadDataSource];
 }
 
 - (void)didAcceptedByBuddy:(NSString *)username
 {
-    [_contactsVC reloadDataSource];
+    [_friendsListVC reloadDataSource];
 }
 
 - (void)didRejectedByBuddy:(NSString *)username
@@ -465,7 +465,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 }
 
 - (void)didAcceptBuddySucceed:(NSString *)username{
-    [_contactsVC reloadDataSource];
+    [_friendsListVC reloadDataSource];
 }
 
 #pragma mark - IChatManagerDelegate 群组变化
@@ -478,7 +478,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     [self playSoundAndVibration];
 #endif
     
-    [_contactsVC reloadGroupView];
+    [_friendsListVC reloadGroupView];
 }
 
 //接收到入群申请
@@ -493,7 +493,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
         [self playSoundAndVibration];
 #endif
         
-        [_contactsVC reloadGroupView];
+        [_friendsListVC reloadGroupView];
     }
 }
 
