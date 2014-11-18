@@ -10,7 +10,7 @@
   * from EaseMob Technologies.
   */
 
-#import "FriendListViewController.h"
+#import "ContactListViewController.h"
 
 #import "BaseTableViewCell.h"
 #import "RealtimeSearchUtil.h"
@@ -20,10 +20,10 @@
 #import "EMSearchDisplayController.h"
 #import "AddFriendViewController.h"
 #import "ApplyViewController.h"
-#import "GroupListViewController.h"
+#import "UserGroupListViewController.h"
 #import "ChatViewController.h"
 
-@interface FriendListViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UIActionSheetDelegate, BaseTableCellDelegate, SRRefreshDelegate>
+@interface ContactListViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UIActionSheetDelegate, BaseTableCellDelegate, SRRefreshDelegate>
 {
     NSIndexPath *_currentLongPressIndex;
 }
@@ -36,13 +36,13 @@
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) EMSearchBar *searchBar;
 @property (strong, nonatomic) SRRefreshView *slimeView;
-@property (strong, nonatomic) GroupListViewController *groupController;
+@property (strong, nonatomic) UserGroupListViewController *groupController;
 
 @property (strong, nonatomic) EMSearchDisplayController *searchController;
 
 @end
 
-@implementation FriendListViewController
+@implementation ContactListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -156,7 +156,7 @@
         _searchController.delegate = self;
         _searchController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
-        __weak FriendListViewController *weakSelf = self;
+        __weak ContactListViewController *weakSelf = self;
         [_searchController setCellForRowAtIndexPathCompletion:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             static NSString *CellIdentifier = @"ContactListCell";
             BaseTableViewCell *cell = (BaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -365,7 +365,7 @@
         else if (indexPath.row == 1)
         {
             if (_groupController == nil) {
-                _groupController = [[GroupListViewController alloc] initWithStyle:UITableViewStylePlain];
+                _groupController = [[UserGroupListViewController alloc] initWithStyle:UITableViewStylePlain];
             }
             else{
                 [_groupController reloadDataSource];
@@ -466,7 +466,7 @@
 //刷新列表
 - (void)slimeRefreshStartRefresh:(SRRefreshView *)refreshView
 {
-    __weak FriendListViewController *weakSelf = self;
+    __weak ContactListViewController *weakSelf = self;
     [[[EaseMob sharedInstance] chatManager] asyncFetchBuddyListWithCompletion:^(NSArray *buddyList, EMError *error) {
         if (!error) {
             [weakSelf reloadDataSource];

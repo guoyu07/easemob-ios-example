@@ -21,7 +21,7 @@
 #import "DXFaceView.h"
 #import "EMChatViewCell.h"
 #import "EMChatTimeCell.h"
-#import "ChatSendHelper.h"
+#import "ChatSendHandler.h"
 #import "MessageReadManager.h"
 #import "MessageModelManager.h"
 #import "LocationViewController.h"
@@ -765,7 +765,7 @@
 
 -(void)sendLocationLatitude:(double)latitude longitude:(double)longitude andAddress:(NSString *)address
 {
-    EMMessage *locationMessage = [ChatSendHelper sendLocationLatitude:latitude longitude:longitude address:address toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
+    EMMessage *locationMessage = [ChatSendHandler sendLocationLatitude:latitude longitude:longitude address:address toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
     [self addChatDataToMessage:locationMessage];
 }
 
@@ -1162,25 +1162,25 @@
 //        EMMessage *tempMessage = [ChatSendHelper sendTextMessageWithString:str toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
 //        [self addChatDataToMessage:tempMessage];
 //    }
-    EMMessage *tempMessage = [ChatSendHelper sendTextMessageWithString:textMessage toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
+    EMMessage *tempMessage = [ChatSendHandler sendTextMessageWithString:textMessage toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
     [self addChatDataToMessage:tempMessage];
 }
 
 -(void)sendImageMessage:(UIImage *)imageMessage
 {
-    EMMessage *tempMessage = [ChatSendHelper sendImageMessageWithImage:imageMessage toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
+    EMMessage *tempMessage = [ChatSendHandler sendImageMessageWithImage:imageMessage toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
     [self addChatDataToMessage:tempMessage];
 }
 
 -(void)sendAudioMessage:(EMChatVoice *)voice
 {
-    EMMessage *tempMessage = [ChatSendHelper sendVoice:voice toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
+    EMMessage *tempMessage = [ChatSendHandler sendVoice:voice toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
     [self addChatDataToMessage:tempMessage];
 }
 
 -(void)sendVideoMessage:(EMChatVideo *)video
 {
-    EMMessage *tempMessage = [ChatSendHelper sendVideo:video toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
+    EMMessage *tempMessage = [ChatSendHandler sendVideo:video toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
     [self addChatDataToMessage:tempMessage];
 }
 

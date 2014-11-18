@@ -12,7 +12,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-@interface FriendListViewController : BaseViewController
+@interface ContactListViewController : BaseViewController
 
 //好友请求变化时，更新好友请求未处理的个数
 - (void)reloadApplyView;

@@ -12,7 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ChatSendHelper : NSObject
+@interface ChatSendHandler : NSObject
 
 /**
  *  发送文字消息（包括系统表情）

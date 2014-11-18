@@ -266,7 +266,7 @@
 		F33B7BEB1A16529F006A962F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B421A16529F006A962F /* AppDelegate.m */; };
 		F33B7BEC1A16529F006A962F /* ChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B461A16529F006A962F /* ChatListCell.m */; };
 		F33B7BED1A16529F006A962F /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B481A16529F006A962F /* ChatListViewController.m */; };
-		F33B7BEE1A16529F006A962F /* ChatSendHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B4B1A16529F006A962F /* ChatSendHelper.m */; };
+		F33B7BEE1A16529F006A962F /* ChatSendHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B4B1A16529F006A962F /* ChatSendHandler.m */; };
 		F33B7BEF1A16529F006A962F /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B4D1A16529F006A962F /* ChatViewController.m */; };
 		F33B7BF01A16529F006A962F /* ConvertToCommonEmoticonsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B4F1A16529F006A962F /* ConvertToCommonEmoticonsHelper.m */; };
 		F33B7BF11A16529F006A962F /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B511A16529F006A962F /* LocationViewController.m */; };
@@ -290,12 +290,12 @@
 		F33B7C031A16529F006A962F /* ChatGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B7E1A16529F006A962F /* ChatGroupDetailViewController.m */; };
 		F33B7C041A16529F006A962F /* ContactSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B801A16529F006A962F /* ContactSelectionViewController.m */; };
 		F33B7C051A16529F006A962F /* CreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B821A16529F006A962F /* CreateGroupViewController.m */; };
-		F33B7C061A16529F006A962F /* GroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B841A16529F006A962F /* GroupListViewController.m */; };
+		F33B7C061A16529F006A962F /* UserGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B841A16529F006A962F /* UserGroupListViewController.m */; };
 		F33B7C071A16529F006A962F /* GroupSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B861A16529F006A962F /* GroupSettingViewController.m */; };
 		F33B7C081A16529F006A962F /* PublicGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B881A16529F006A962F /* PublicGroupDetailViewController.m */; };
 		F33B7C091A16529F006A962F /* PublicGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B8A1A16529F006A962F /* PublicGroupListViewController.m */; };
 		F33B7C0A1A16529F006A962F /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B8D1A16529F006A962F /* ChineseToPinyin.m */; };
-		F33B7C0B1A16529F006A962F /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B8F1A16529F006A962F /* FriendListViewController.m */; };
+		F33B7C0B1A16529F006A962F /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B8F1A16529F006A962F /* ContactListViewController.m */; };
 		F33B7C0C1A16529F006A962F /* AddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B921A16529F006A962F /* AddFriendCell.m */; };
 		F33B7C0D1A16529F006A962F /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B941A16529F006A962F /* AddFriendViewController.m */; };
 		F33B7C0E1A16529F006A962F /* ApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B7B961A16529F006A962F /* ApplyFriendCell.m */; };
@@ -746,8 +746,8 @@
 		F33B7B461A16529F006A962F /* ChatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListCell.m; sourceTree = "<group>"; };
 		F33B7B471A16529F006A962F /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
 		F33B7B481A16529F006A962F /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
-		F33B7B4A1A16529F006A962F /* ChatSendHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSendHelper.h; sourceTree = "<group>"; };
-		F33B7B4B1A16529F006A962F /* ChatSendHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSendHelper.m; sourceTree = "<group>"; };
+		F33B7B4A1A16529F006A962F /* ChatSendHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSendHandler.h; sourceTree = "<group>"; };
+		F33B7B4B1A16529F006A962F /* ChatSendHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSendHandler.m; sourceTree = "<group>"; };
 		F33B7B4C1A16529F006A962F /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		F33B7B4D1A16529F006A962F /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		F33B7B4E1A16529F006A962F /* ConvertToCommonEmoticonsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertToCommonEmoticonsHelper.h; sourceTree = "<group>"; };
@@ -794,8 +794,8 @@
 		F33B7B801A16529F006A962F /* ContactSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSelectionViewController.m; sourceTree = "<group>"; };
 		F33B7B811A16529F006A962F /* CreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGroupViewController.h; sourceTree = "<group>"; };
 		F33B7B821A16529F006A962F /* CreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGroupViewController.m; sourceTree = "<group>"; };
-		F33B7B831A16529F006A962F /* GroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListViewController.h; sourceTree = "<group>"; };
-		F33B7B841A16529F006A962F /* GroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListViewController.m; sourceTree = "<group>"; };
+		F33B7B831A16529F006A962F /* UserGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGroupListViewController.h; sourceTree = "<group>"; };
+		F33B7B841A16529F006A962F /* UserGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGroupListViewController.m; sourceTree = "<group>"; };
 		F33B7B851A16529F006A962F /* GroupSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSettingViewController.h; sourceTree = "<group>"; };
 		F33B7B861A16529F006A962F /* GroupSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSettingViewController.m; sourceTree = "<group>"; };
 		F33B7B871A16529F006A962F /* PublicGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicGroupDetailViewController.h; sourceTree = "<group>"; };
@@ -804,8 +804,8 @@
 		F33B7B8A1A16529F006A962F /* PublicGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicGroupListViewController.m; sourceTree = "<group>"; };
 		F33B7B8C1A16529F006A962F /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
 		F33B7B8D1A16529F006A962F /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
-		F33B7B8E1A16529F006A962F /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
-		F33B7B8F1A16529F006A962F /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
+		F33B7B8E1A16529F006A962F /* ContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
+		F33B7B8F1A16529F006A962F /* ContactListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListViewController.m; sourceTree = "<group>"; };
 		F33B7B911A16529F006A962F /* AddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendCell.h; sourceTree = "<group>"; };
 		F33B7B921A16529F006A962F /* AddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendCell.m; sourceTree = "<group>"; };
 		F33B7B931A16529F006A962F /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
@@ -1855,8 +1855,8 @@
 		F33B7B491A16529F006A962F /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
-				F33B7B4A1A16529F006A962F /* ChatSendHelper.h */,
-				F33B7B4B1A16529F006A962F /* ChatSendHelper.m */,
+				F33B7B4A1A16529F006A962F /* ChatSendHandler.h */,
+				F33B7B4B1A16529F006A962F /* ChatSendHandler.m */,
 				F33B7B4C1A16529F006A962F /* ChatViewController.h */,
 				F33B7B4D1A16529F006A962F /* ChatViewController.m */,
 				F33B7B4E1A16529F006A962F /* ConvertToCommonEmoticonsHelper.h */,
@@ -1974,8 +1974,8 @@
 				F33B7B801A16529F006A962F /* ContactSelectionViewController.m */,
 				F33B7B811A16529F006A962F /* CreateGroupViewController.h */,
 				F33B7B821A16529F006A962F /* CreateGroupViewController.m */,
-				F33B7B831A16529F006A962F /* GroupListViewController.h */,
-				F33B7B841A16529F006A962F /* GroupListViewController.m */,
+				F33B7B831A16529F006A962F /* UserGroupListViewController.h */,
+				F33B7B841A16529F006A962F /* UserGroupListViewController.m */,
 				F33B7B851A16529F006A962F /* GroupSettingViewController.h */,
 				F33B7B861A16529F006A962F /* GroupSettingViewController.m */,
 				F33B7B871A16529F006A962F /* PublicGroupDetailViewController.h */,
@@ -1991,8 +1991,8 @@
 			children = (
 				F33B7B8C1A16529F006A962F /* ChineseToPinyin.h */,
 				F33B7B8D1A16529F006A962F /* ChineseToPinyin.m */,
-				F33B7B8E1A16529F006A962F /* FriendListViewController.h */,
-				F33B7B8F1A16529F006A962F /* FriendListViewController.m */,
+				F33B7B8E1A16529F006A962F /* ContactListViewController.h */,
+				F33B7B8F1A16529F006A962F /* ContactListViewController.m */,
 				F33B7B901A16529F006A962F /* FriendApply */,
 				F33B7B991A16529F006A962F /* RealtimeSearchUtil.h */,
 				F33B7B9A1A16529F006A962F /* RealtimeSearchUtil.m */,
@@ -2412,7 +2412,7 @@
 				F33B7C1D1A16529F006A962F /* NSManagedObject+MagicalRequests.m in Sources */,
 				F33B7C081A16529F006A962F /* PublicGroupDetailViewController.m in Sources */,
 				F33B7C131A16529F006A962F /* NSAttributeDescription+MagicalDataImport.m in Sources */,
-				F33B7C061A16529F006A962F /* GroupListViewController.m in Sources */,
+				F33B7C061A16529F006A962F /* UserGroupListViewController.m in Sources */,
 				F33B7C181A16529F006A962F /* NSString+MagicalDataImport.m in Sources */,
 				F33B7BF51A16529F006A962F /* DXChatBarMoreView.m in Sources */,
 				90EF2CEF192F2B4E00BDC549 /* SRSlimeView.m in Sources */,
@@ -2439,7 +2439,7 @@
 				3CBF90C019302F5000AD68AE /* BaseViewController.m in Sources */,
 				3C9DDAB4193871D8007C765A /* EMSearchDisplayController.m in Sources */,
 				F33B7BF91A16529F006A962F /* EMChatImageBubbleView.m in Sources */,
-				F33B7C0B1A16529F006A962F /* FriendListViewController.m in Sources */,
+				F33B7C0B1A16529F006A962F /* ContactListViewController.m in Sources */,
 				90133EC11972DFF400C49B56 /* UIViewController+DismissKeyboard.m in Sources */,
 				F33B7C121A16529F006A962F /* MagicalImportFunctions.m in Sources */,
 				F33B7C0C1A16529F006A962F /* AddFriendCell.m in Sources */,
@@ -2490,7 +2490,7 @@
 				F33B7C221A16529F006A962F /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				3C1CEF6E196E9F5400DBA56B /* MWZoomingScrollView.m in Sources */,
 				F33B7C281A16529F006A962F /* MagicalRecord+Options.m in Sources */,
-				F33B7BEE1A16529F006A962F /* ChatSendHelper.m in Sources */,
+				F33B7BEE1A16529F006A962F /* ChatSendHandler.m in Sources */,
 				F33B7C331A16529F006A962F /* SettingsViewController.m in Sources */,
 				F33B7C3A1A16DEFD006A962F /* UIImage+ImageWithColor.m in Sources */,
 				3C1CEF7C196E9F5400DBA56B /* PSTGridLayoutSection.m in Sources */,

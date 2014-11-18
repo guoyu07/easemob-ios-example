@@ -12,7 +12,7 @@
 
 #import "TabBarViewController.h"
 #import "ChatListViewController.h"
-#import "FriendListViewController.h"
+#import "ContactListViewController.h"
 #import "SettingsViewController.h"
 #import "ApplyViewController.h"
 
@@ -22,7 +22,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
 @interface TabBarViewController () <UIAlertViewDelegate, IChatManagerDelegate>
 {
     ChatListViewController *_chatListVC;
-    FriendListViewController *_friendsListVC;
+    ContactListViewController *_friendsListVC;
     SettingsViewController *_settingsVC;
     
     UIBarButtonItem *_addFriendItem;
@@ -54,6 +54,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     
     //获取未读消息数，此时并没有把self注册为SDK的delegate，读取出的未读数是上次退出程序时的
     [self didUnreadMessagesCountChanged];
+
 #warning 把self注册为SDK的delegate
     [self registerNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupUntreatedApplyCount) name:@"setupUntreatedApplyCount" object:nil];
@@ -147,7 +148,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
     [self unSelectedTapTabBarItems:_chatListVC.tabBarItem];
     [self selectedTapTabBarItems:_chatListVC.tabBarItem];
     
-    _friendsListVC = [[FriendListViewController alloc] initWithNibName:nil bundle:nil];
+    _friendsListVC = [[ContactListViewController alloc] initWithNibName:nil bundle:nil];
     _friendsListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"好友"
                                                            image:nil
                                                              tag:1];

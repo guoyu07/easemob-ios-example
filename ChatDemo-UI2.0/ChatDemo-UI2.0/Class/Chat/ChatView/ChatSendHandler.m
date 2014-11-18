@@ -10,7 +10,7 @@
  * from EaseMob Technologies.
  */
 
-#import "ChatSendHelper.h"
+#import "ChatSendHandler.h"
 #import "ConvertToCommonEmoticonsHelper.h"
 
 #import "EMCommandMessageBody.h"
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation ChatSendHelper
+@implementation ChatSendHandler
 
 +(EMMessage *)sendTextMessageWithString:(NSString *)str
                              toUsername:(NSString *)username

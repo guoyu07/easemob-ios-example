@@ -22,4 +22,5 @@
 @property (nonatomic) NSInteger unreadCount;
 
 +(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

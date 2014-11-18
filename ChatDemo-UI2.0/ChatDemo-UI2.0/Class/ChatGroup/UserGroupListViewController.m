@@ -10,7 +10,7 @@
   * from EaseMob Technologies.
   */
 
-#import "GroupListViewController.h"
+#import "UserGroupListViewController.h"
 
 #import "EMSearchBar.h"
 #import "SRRefreshView.h"
@@ -22,7 +22,7 @@
 #import "RealtimeSearchUtil.h"
 #import "UIViewController+HUD.h"
 
-@interface GroupListViewController ()<UISearchBarDelegate, UISearchDisplayDelegate, IChatManagerDelegate, SRRefreshDelegate>
+@interface UserGroupListViewController ()<UISearchBarDelegate, UISearchDisplayDelegate, IChatManagerDelegate, SRRefreshDelegate>
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation GroupListViewController
+@implementation UserGroupListViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -137,7 +137,7 @@
         _searchController.delegate = self;
         _searchController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
-        __weak GroupListViewController *weakSelf = self;
+        __weak UserGroupListViewController *weakSelf = self;
         [_searchController setCellForRowAtIndexPathCompletion:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             static NSString *CellIdentifier = @"ContactListCell";
             BaseTableViewCell *cell = (BaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
